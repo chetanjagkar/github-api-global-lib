@@ -1,4 +1,4 @@
-@Library('darin') import static PipelineUtility.*
+
 def call(body) {
     
     def pipelineParams= [:]
@@ -30,7 +30,7 @@ def call(body) {
                     //helloWorld(name: "prepareBuildEnvironment")
                     //helloWorldExternal()
                     echo 'prepare'
-                    markBuildStatus(this,'pipelineStage','err','success','SUCCESS')
+                    @Library('darin').PipelineUtility.markBuildStatus(this,'pipelineStage','err','success','SUCCESS')
                     }
                 }
             }
