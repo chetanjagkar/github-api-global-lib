@@ -1,4 +1,4 @@
-class PipelineUtility
+class PipelineUtility implements Serializable
 {
 
 
