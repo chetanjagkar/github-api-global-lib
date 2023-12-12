@@ -85,6 +85,7 @@ def call(String agentLabel,body) {
         post {
             always {
               //addSidebarLink()
+                echo 'always'
             }
         }
     }
