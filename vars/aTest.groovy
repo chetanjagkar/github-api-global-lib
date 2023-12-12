@@ -23,11 +23,15 @@ def call(body) {
             stage("Prepare Build Environment") {
                 agent { label "${agentLabel}" }
                 steps {
+                    script
+                    {
+
                     //prepareBuildEnvironment()
                     //helloWorld(name: "prepareBuildEnvironment")
                     //helloWorldExternal()
                     echo 'prepare'
                     markBuildStatus(this,'pipelineStage','err','success','SUCCESS')
+                    }
                 }
             }
             stage("Source Code Checkout") {
