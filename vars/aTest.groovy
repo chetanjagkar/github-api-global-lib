@@ -96,6 +96,7 @@ def call(body) {
             always {
               //addSidebarLink()
                 echo 'always'
+                input 'dd'
             }
         }
     }
