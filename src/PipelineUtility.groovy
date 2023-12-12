@@ -2,7 +2,7 @@ class PipelineUtility implements Serializable
 {
 
 
-  def markBuildStatus(script,pipelineStage,err,pipelinGitlabState,currentBuildResult)
+  def static markBuildStatus(script,pipelineStage,err,pipelinGitlabState,currentBuildResult)
   {
       script.echo "Build failed at ${pipelineStage} stage with Error ${err}"
       if("${err}" == "org.jenkinsci.plugins.workflow.steps.FlowInterruptedException")
