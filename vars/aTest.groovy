@@ -1,3 +1,4 @@
+import static PipelineUtility.*
 def call(body) {
     
     def pipelineParams= [:]
@@ -26,6 +27,7 @@ def call(body) {
                     //helloWorld(name: "prepareBuildEnvironment")
                     //helloWorldExternal()
                     echo 'prepare'
+                    PipelineUtility.markBuildStatus(this,pipelineStage,err,'success','SUCCESS')
                 }
             }
             stage("Source Code Checkout") {
