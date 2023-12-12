@@ -1,3 +1,4 @@
+import static PipelineUtility.*
 
 def call(body) {
     
