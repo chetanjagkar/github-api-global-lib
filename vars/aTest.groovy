@@ -12,7 +12,7 @@ def call(body) {
             stage("echo parameters") {
                 agent { label "${agentLabel}" }
                 steps {
-                    sh "env | sort"
+                    //sh "env | sort"
                     echo "${agentLabel}"
                     echo "${pipelineParams.osConfiguration}"
                     echo "${pipelineParams.osConfiguration.OS_VERSION}"
@@ -22,9 +22,9 @@ def call(body) {
             stage("Prepare Build Environment") {
                 agent { label "${agentLabel}" }
                 steps {
-                    prepareBuildEnvironment()
+                    //prepareBuildEnvironment()
                     helloWorld(name: "prepareBuildEnvironment")
-                    helloWorldExternal()
+                    //helloWorldExternal()
                 }
             }
             stage("Source Code Checkout") {
@@ -51,13 +51,13 @@ def call(body) {
             stage("Publish Artifacts") {
                 agent { label "${agentLabel}" }
                 steps {
-                    publishArtifacts(name: "publishArtifacts")
+                    //publishArtifacts(name: "publishArtifacts")
                 }
             }
             stage("Deploy Application") {
                 agent { label "${agentLabel}" }
                 steps {
-                    deployApplication(name: "deployApplication")
+                    //deployApplication(name: "deployApplication")
                 }
             }
             //stage("Long Running Stage") {
