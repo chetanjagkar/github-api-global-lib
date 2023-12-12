@@ -30,7 +30,7 @@ def call(body) {
                     //helloWorld(name: "prepareBuildEnvironment")
                     //helloWorldExternal()
                     echo 'prepare'
-                    @Library('darin').PipelineUtility.markBuildStatus(this,'pipelineStage','err','success','SUCCESS')
+                    library('darin').PipelineUtility.markBuildStatus(this,'pipelineStage','err','success','SUCCESS')
                     }
                 }
             }
