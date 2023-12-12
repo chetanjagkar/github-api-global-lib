@@ -14,9 +14,9 @@ def call(body) {
                 steps {
                     //sh "env | sort"
                     echo "${agentLabel}"
-                    echo "${pipelineParams.osConfiguration}"
-                    echo "${pipelineParams.osConfiguration.OS_VERSION}"
-                    echo "${pipelineParams.osConfiguration.DIR_TYPE}"                    
+                    //echo "${pipelineParams.osConfiguration}"
+                    //echo "${pipelineParams.osConfiguration.OS_VERSION}"
+                    //echo "${pipelineParams.osConfiguration.DIR_TYPE}"                    
                 }
             }
             stage("Prepare Build Environment") {
