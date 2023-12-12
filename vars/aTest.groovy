@@ -1,4 +1,4 @@
-import static PipelineUtility.*
+@Library('utils') import static PipelineUtility.*
 def call(body) {
     
     def pipelineParams= [:]
