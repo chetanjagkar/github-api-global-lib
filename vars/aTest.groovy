@@ -23,8 +23,9 @@ def call(body) {
                 agent { label "${agentLabel}" }
                 steps {
                     //prepareBuildEnvironment()
-                    helloWorld(name: "prepareBuildEnvironment")
+                    //helloWorld(name: "prepareBuildEnvironment")
                     //helloWorldExternal()
+                    echo 'prepare'
                 }
             }
             stage("Source Code Checkout") {
