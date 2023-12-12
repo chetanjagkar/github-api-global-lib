@@ -5,6 +5,7 @@ def call(body) {
     body.delegate = pipelineParams
     body()
 
+    def agentLabel = 'master'
     pipeline {
         agent none
         stages {
