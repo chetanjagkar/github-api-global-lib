@@ -52,12 +52,14 @@ def call(body) {
                 agent { label "${agentLabel}" }
                 steps {
                     //publishArtifacts(name: "publishArtifacts")
+                    echo 'publishArtifacts'
                 }
             }
             stage("Deploy Application") {
                 agent { label "${agentLabel}" }
                 steps {
                     //deployApplication(name: "deployApplication")
+                    echo 'deployApplication'
                 }
             }
             //stage("Long Running Stage") {
